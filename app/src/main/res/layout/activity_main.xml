@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jiemian"
+    >
+
+    <!-- 实验室标题和当前时间 -->
+    <RelativeLayout
+        android:id="@+id/experimentRoomHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/currentTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="当前时间"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/experimentRoomName"
+                android:layout_width="1599dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="电工电子实验室S211"
+                android:textColor="#FFFFFF"
+                android:textSize="40sp" />
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="当前时间"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- 中间部分 -->
+    <LinearLayout
+        android:id="@+id/middleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/experimentRoomHeader"
+        android:orientation="horizontal"
+        android:elevation="4dp">
+
+        <!-- 左边部分 -->
+
+        <!-- 右边部分 -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="869dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 实验室图片 -->
+            <FrameLayout
+                android:id="@+id/imageAndScanLayout"
+                android:layout_width="match_parent"
+                android:layout_height="563dp"
+
+                >
+                <!--                android:background="@drawable/my_huiyishi"-->
+                <!-- 新加入的 FrameLayout 用于显示会议进行中的信息 -->
+
+                <FrameLayout
+                    android:id="@+id/experimentStatusLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/experimentStatusTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="实验室开放中"
+                            android:textColor="#FFA500"
+                            android:textSize="70sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/experimentItem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="开放项目："
+                                android:textColor="#698B22"
+                                android:textSize="50sp" />
+
+                            <TextView
+                                android:id="@+id/experimentItemName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="RC电路设计"
+                                android:textColor="#FFA500"
+                                android:textSize="50sp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/experimentTextView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="当前时段签到 "
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/curSignupNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#FFA500"
+                                android:text="0"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:id="@+id/experimentTextView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" 人，预约人数 "
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/curBookingNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#FFA500"
+                                android:text="0"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/experimentTextView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" 人"
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/experimentTextView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="本日累计签到 "
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/sumSignupNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#FFA500"
+                                android:text="0"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/experimentTextView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="人，总预约数 "
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/sumBookingNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:textColor="#FFA500"
+                                android:text="0"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/experimentTextView7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text=" 人"
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/experimentStatusTextView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:textColor="#698B22"
+                            android:textSize="40sp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/experimentStatusTextView5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="最近签到人员： "
+                                android:textColor="#698B22"
+                                android:textSize="40sp" />
+                            <TextView
+                                android:id="@+id/experimentStatusTextView6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="张三 2023-12-07 08:30"
+                                android:textColor="#FFA500"
+                                android:textSize="40sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <!-- ImageView for meeting room image -->
+                <!--                <ImageView-->
+                <!--                    android:id="@+id/meetingRoomImage"-->
+                <!--                    android:layout_width="880dp"-->
+                <!--                    android:layout_height="568dp"-->
+
+                <!--                    android:scaleType="centerCrop"-->
+                <!--                    android:src="@drawable/my_huiyishi" />-->
+                <!--                <FrameLayout-->
+                <!--                    android:id="@+id/faceRecognitionContainer"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:visibility="gone">-->
+
+                <!--                    &lt;!&ndash; This is where the Face Recognition fragment will be added dynamically &ndash;&gt;-->
+
+                <!--                </FrameLayout>-->
+
+                <!-- 扫码区域 -->
+                <!--                <FrameLayout-->
+                <!--                    android:id="@+id/scanLayout"-->
+                <!--                    android:layout_width="909dp"-->
+                <!--                    android:layout_height="570dp"-->
+                <!--                    android:visibility="invisible">-->
+
+                <!--                    &lt;!&ndash; DecoratedBarcodeView for camera preview &ndash;&gt;-->
+                <!--                    <com.journeyapps.barcodescanner.DecoratedBarcodeView-->
+                <!--                        android:id="@+id/barcodeScannerView"-->
+                <!--                        android:layout_width="913dp"-->
+                <!--                        android:layout_height="570dp" />-->
+
+                <!--                    &lt;!&ndash; Optional: Add UI elements on top of the camera preview (e.g., scan guides) &ndash;&gt;-->
+
+                <!--                </FrameLayout>-->
+            </FrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/faceRecognitionButton"
+                    android:layout_width="230dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="120dp"
+                    style="@style/MyButtonStyle"
+                    android:text="人脸认证"
+                    android:gravity="center" />
+
+                <Button
+                    android:id="@+id/scanButton"
+                    android:layout_width="230dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginLeft="91dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_toRightOf="@id/faceRecognitionButton"
+                    style="@style/MyButtonStyle"
+                    android:gravity="center"
+                    android:text="扫码认证" /> <!-- Add gravity attribute here -->
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="909dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+            <LinearLayout
+                android:id="@+id/openLabNextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="338dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+
+                android:orientation="vertical"
+                android:padding="16dp">
+
+
+                <TextView
+                    android:id="@+id/openLabOpeningHours"
+                    android:layout_width="596dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="13dp"
+                    android:text="无"
+                    android:textColor="#292929"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/openLabOpeningItem"
+                    android:layout_width="600dp"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="10dp"
+                    android:text="无"
+                    android:textColor="#292929"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/openLabTeacher"
+                    android:layout_width="584dp"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="13dp"
+                    android:text="无"
+                    android:textColor="#292929"
+                    android:textSize="45sp" />
+
+                <TextView
+                    android:id="@+id/openLabContinueItem"
+                    android:layout_width="584dp"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="280dp"
+                    android:layout_marginTop="10dp"
+                    android:text="无"
+                    android:textColor="#292929"
+                    android:textSize="45sp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/cardNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:textSize="16sp"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                android:clickable="false"
+            />
+
+
+
+            <ListView
+                android:id="@+id/openLabListView"
+                android:layout_width="798dp"
+                android:layout_height="414dp"
+                android:layout_marginLeft="82dp"
+                android:layout_marginTop="10dp"
+                android:focusable="false"
+                android:listSelector="@android:color/transparent"
+                android:paddingTop="20dp" />
+
+            <TextView
+                android:id="@+id/TvLocalReservation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:padding="16dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
